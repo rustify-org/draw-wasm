@@ -5,4 +5,25 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+
+[lib]
+crate-type = ["cdylib"]
+
 [dependencies]
+js-sys = "0.3.46"
+wasm-bindgen = "0.2.69"
+
+[dependencies.web-sys]
+features = [
+    'CanvasRenderingContext2d',
+    'CssStyleDeclaration',
+    'Document',
+    'Element',
+    'EventTarget',
+    'HtmlCanvasElement',
+    'HtmlElement',
+    'MouseEvent',
+    'Node',
+    'Window',
+]
+version = "0.3.4"
